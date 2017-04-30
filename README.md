@@ -6,7 +6,7 @@
 
     •	El Dataset adquirido en el paso anterior fue almacenado en HDFS.
 
-    •	El proceso de transform se realizó al mismo tiempo que se hacía el procesamiento, es decir, dentro de la misma función mapper.
+    •	El proceso de transform se realizó al mismo tiempo que se hacía el procesamiento, es decir, dentro de la misma función mapper. En dicho proceso se realizó al limpieza del dataset de caracteres especiales, tildes, números, además se pasaron todas las palabras a minusculas (Este proceso se puede encontrar en el archivo "wc-mrjob.py").
 
   # Procesamiento
 
