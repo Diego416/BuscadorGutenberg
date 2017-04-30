@@ -19,10 +19,10 @@
     El almacenamiento del resultado final se realizó en una base de datos MySql, este almacenamiento se realizó a través de la herramienta Skoop, para realizar el mapeo de HDFS a MySql, la sentencia utilizada fue:
     
       $ sqoop export \
---connect jdbc:mysql://10.131.137.188:3306/st0263 \
---username st0263 -P \
---table jmunozc2WC \
---export-dir /user/jmunozc2/data_out/out4/clean_data
+        --connect jdbc:mysql://10.131.137.188:3306/st0263 \
+        --username st0263 -P \
+        --table jmunozc2WC \
+        --export-dir /user/jmunozc2/data_out/out4/clean_data
 
   # Aplicación
 
