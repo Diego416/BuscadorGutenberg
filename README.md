@@ -8,11 +8,11 @@
 
     •	El proceso de transform se realizó al mismo tiempo que se hacía el procesamiento, es decir, dentro de la misma función mapper. En dicho proceso se realizó al limpieza del dataset de caracteres especiales, tildes, números, además se pasaron todas las palabras a minusculas (Este proceso se puede encontrar en el archivo "wc-mrjob.py").
     
-    •	Además, luego de realizar el procesamiento se realizó una limpieza del archivo obtenido, dicha limpieza comprende limpieza de comillas(") y tabuladores(\t). Esta limpieza se realizó con el fin de dejar el archivo listo para ser utilizado por Skoop.
+    •	Además, luego de realizar el procesamiento se realizó una limpieza del archivo obtenido, dicha limpieza comprende limpieza de comillas("), tabuladores(\t), corchetes([, ]) y espacios en blanco. Esta limpieza se realizó con el fin de dejar el archivo listo para ser utilizado por Skoop.
 
   # Procesamiento
 
-    El procesamiento se realizó mediante el paradigma Map/Reduce con Python, especificamente con la biblioteca MRJob.
+    El procesamiento se realizó mediante el paradigma Map/Reduce con Python, especificamente con la biblioteca MRJob (Este procesamiento se puede encontrar en el archivo "wc-mrjob.py").
     
   # Storage
 
