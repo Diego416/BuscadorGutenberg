@@ -18,7 +18,7 @@ def limpiar (word):
    word = tildes(word)
    word = numeros(word)
    word = word.lower()
-   word = word;
+   word = word+',';
    return word
  
 class MRWordFrequencyCount(MRJob):
@@ -32,13 +32,16 @@ class MRWordFrequencyCount(MRJob):
 
   def reducer(self, key, values):
       l = list(key)
-      yield l[0],(sum(values),l)
+      yield l[0],(sum(values),l[1])
 
   def reducer2(self, key, pairs):
         l = list(pairs)
         l.sort(reverse=True)
         l = l[:10]
-        yield l,1
+        l2 = list()
+        for i in l:
+           l2.append(i[1])
+        yield key,l2
 
 
   def steps(self):
