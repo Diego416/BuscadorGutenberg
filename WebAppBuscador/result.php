@@ -1,19 +1,23 @@
 <?php
-// Start the session
-session_start();
+if (function_exists(‘mysqli_connect’)) {
+    // Start the session
+    session_start();
 
-// Create connection
-$conn = new mysqli("10.131.137.188", "st0263", "st0263.2017", "st0263", "3306");
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    // Create connection
+    $conn = new mysqli("10.131.137.188", "st0263", "st0263.2017", "st0263", "3306");
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Desactivar toda notificación de error
+    error_reporting(0);
+    
+    // Notificar solamente errores de ejecución
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
+}else{
+    echo "La extension mysqli no esta instalada";
 }
-
-// Desactivar toda notificación de error
-error_reporting(0);
- 
-// Notificar solamente errores de ejecución
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
 ?>
 
 <?php
