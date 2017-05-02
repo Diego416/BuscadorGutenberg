@@ -41,6 +41,8 @@ class MRWordFrequencyCount(MRJob):
         l2 = list()
         for i in l:
            l2.append(i[1])
+        for n in range(0,10-len(l2)):
+           l2.append('null')
         yield key,l2
 
 
